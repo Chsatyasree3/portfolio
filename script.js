@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
- 
+    // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-links a');
 
     navLinks.forEach(link => {
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Animate sections on scroll
     const sections = document.querySelectorAll('.content-section');
     
     const revealSection = () => {
@@ -28,14 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (sectionTop < triggerBottom) {
                 section.classList.add('visible');
             } else {
-                section.classList.remove('visible');
+                section.classList.remove('visible'); // Optional: re-hide if scrolling up
             }
         });
     };
     
     window.addEventListener('scroll', revealSection);
     
-
+    // Initial check in case sections are already in view
     revealSection();
 
 });

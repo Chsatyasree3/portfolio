@@ -1,4 +1,4 @@
-
+/* General Styling */
 :root {
     --primary-color: #6a11cb;
     --secondary-color: #2575fc;
@@ -25,7 +25,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* Header & Navigation */
 header {
     position: fixed;
     width: 100%;
@@ -69,7 +69,7 @@ nav {
     color: var(--primary-color);
 }
 
-
+/* Hero Section */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -107,6 +107,7 @@ nav {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Content Sections */
 .content-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -140,7 +141,7 @@ nav {
     border-radius: 2px;
 }
 
-
+/* About Section */
 .about-container {
     display: flex;
     align-items: center;
@@ -155,7 +156,14 @@ nav {
     border: 5px solid var(--primary-color);
 }
 
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+}
 
+/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -177,6 +185,7 @@ nav {
     color: var(--primary-color);
 }
 
+/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -209,7 +218,7 @@ nav {
     font-weight: 600;
 }
 
-
+/* Contact Section */
 .contact-text {
     text-align: center;
     font-size: 1.1rem;
@@ -225,16 +234,17 @@ nav {
     color: white;
 }
 
-
+/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
     background: #e9ecef;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; 
+        display: none; /* Add a hamburger menu for smaller screens */
     }
 
     .hero-content h1 {
@@ -245,4 +255,14 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+}
+.heart {
+  color: red;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
